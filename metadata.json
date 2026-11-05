@@ -1,0 +1,6 @@
+{
+  "name": "Meme and Humor Idea Generator",
+  "description": "AI-powered Meme and Humor Idea Generator with Gemini, Python Flask backend, SQLite persistence, Tamil and Tanglish support, jokes, captions, and offline fallback.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
