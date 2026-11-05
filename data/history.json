@@ -1,0 +1,155 @@
+[
+  {
+    "id": 2,
+    "topic": "Hostel Mess Sambar",
+    "mode": "meme_generator",
+    "settings": {
+      "category": "College and Student Humor",
+      "style": "Witty",
+      "intensity": "Extra funny",
+      "language": "Tanglish",
+      "count": 2
+    },
+    "result": {
+      "source": "ai",
+      "model": "gemini-3.8-flash",
+      "topic": "Hostel Mess Sambar",
+      "category": "College and Student Humor",
+      "style": "Witty",
+      "intensity": "Extra funny",
+      "language": "Tanglish",
+      "ideas": [
+        {
+          "title": "Deep Sea Exploration in Mess Sambar",
+          "concept": "Hunting for a single dal piece or vegetable inside the infinite watery abyss of hostel mess sambar.",
+          "visual_scene": "A scuba diver deep underwater with an intense searchlight, scanning a vast empty yellow void inside a giant stainless steel mess bucket.",
+          "top_text": "Hostel sambar bucket-la oru paruppu thedum student:",
+          "bottom_text": "4000 meters aazhathula Titanic kedaichudhu, aana dhal mattum kedaika maattengudhu machi!",
+          "caption": "Mess warden sir, idhula paruppu potteengala illa paruppu photo-va bucket munnadi kaatuneengala?",
+          "hashtags": [
+            "#HostelLife",
+            "#MessFoodMemes",
+            "#TanglishMemes",
+            "#CollegeHumor",
+            "#HostelSambar"
+          ]
+        },
+        {
+          "title": "The Universal Mess Liquid Formula",
+          "concept": "The realization that hostel rasam and sambar share the exact same watery DNA, differentiated only by a pinch of turmeric.",
+          "visual_scene": "CID ACP Pradyuman examining a transparent yellow broth in a mess plate with a giant magnifying glass, looking deeply perplexed.",
+          "top_text": "Morning Rasam, Afternoon Sambar, Night Soup:",
+          "bottom_text": "Base formula same thanni dhaan pa... turmeric powder quantity mattum dhaan vera vera!",
+          "caption": "Chemistry lab titration kooda ivlo consistency kaatadhu. Our mess master is the real Heisenberg!",
+          "hashtags": [
+            "#EngineeringHostel",
+            "#TanglishComedy",
+            "#HostelDiaries",
+            "#StudentStruggles",
+            "#MessSambarScam"
+          ]
+        }
+      ]
+    },
+    "created_at": "2026-10-10T07:57:52.693Z"
+  },
+  {
+    "id": 1,
+    "topic": "8 AM College Attendance",
+    "mode": "meme_generator",
+    "settings": {
+      "category": "College and Student Humor",
+      "style": "Witty",
+      "intensity": "Medium",
+      "language": "English",
+      "count": 5
+    },
+    "result": {
+      "source": "ai",
+      "model": "gemini-3.8-flash",
+      "topic": "8 AM College Attendance",
+      "category": "College and Student Humor",
+      "style": "Witty",
+      "intensity": "Medium",
+      "language": "English",
+      "ideas": [
+        {
+          "title": "The Astral Projection Dilemma",
+          "concept": "Being physically sitting in the desk at 8:00 AM while the consciousness and soul are still sound asleep under the blankets.",
+          "visual_scene": "A split image showing a Victorian ghost detaching from an empty body floating back towards a bedroom.",
+          "top_text": "My physical form answering roll call at 8:01 AM",
+          "bottom_text": "My soul resting peacefully in bed until noon",
+          "caption": "Legally I am present, spiritually I do not exist.",
+          "hashtags": [
+            "#CollegeLifeLeadToSleepDebt",
+            "#8amLecture",
+            "#StudentStruggles",
+            "#MorningClass",
+            "#CollegeHumor"
+          ]
+        },
+        {
+          "title": "The Speed of Light Calculation",
+          "concept": "Doing impossible mental gymnastics at 7:48 AM to convince yourself you can shower, commute, and teleport into your seat in 12 minutes.",
+          "visual_scene": "A frantic chalkboard covered in quantum physics equations alongside a small ticking alarm clock.",
+          "top_text": "Me at 7:52 AM calculating if I can defy physics",
+          "bottom_text": "To turn a 40-minute commute into an 8-minute sprint for 75 percent attendance",
+          "caption": "Albert Einstein never factored in morning attendance mandates.",
+          "hashtags": [
+            "#CollegeMath",
+            "#AttendanceCrisis",
+            "#8amStruggle",
+            "#StudentLife",
+            "#CampusHumor"
+          ]
+        },
+        {
+          "title": "The Border Patrol Professor",
+          "concept": "The dramatic standoff when walking through the lecture hall door precisely as the clock turns 8:01 AM.",
+          "visual_scene": "A stern medieval gatekeeper slamming heavy iron castle doors in slow motion.",
+          "top_text": "The professor closing the lecture door at 8:00:01 AM",
+          "bottom_text": "Knowing full well they just crushed 5 people's semester eligibility",
+          "caption": "Punctuality is a virtue, but this is a personal vendetta.",
+          "hashtags": [
+            "#StrictProfessors",
+            "#CollegeMemes",
+            "#AttendancePolicy",
+            "#CampusLife",
+            "#EarlyMorningPain"
+          ]
+        },
+        {
+          "title": "The Silent Nod of Survival",
+          "concept": "Making eye contact with your classmate at an 8 AM class who looks just as emotionally and physically ruined as you.",
+          "visual_scene": "Two heavily armored knights silently nodding at each other in the pouring rain before battle.",
+          "top_text": "Meeting eyes with your friend in the back row at 8:03 AM",
+          "bottom_text": "Acknowledging that both of you are running on 45 minutes of sleep and caffeine fumes",
+          "caption": "No words exchanged, just pure mutual respect for surviving the commute.",
+          "hashtags": [
+            "#CollegeRelatable",
+            "#SurvivorSpirit",
+            "#Backbenchers",
+            "#MorningAttendance",
+            "#UniLife"
+          ]
+        },
+        {
+          "title": "The Ghost Towns of Academia",
+          "concept": "The sheer emptiness of campus walkways compared to the packed lecture hall where everyone is reluctantly checking in for attendance.",
+          "visual_scene": "A tumbleweed blowing across an abandoned Western movie town.",
+          "top_text": "The entire city at 7:45 AM on a chilly Tuesday morning",
+          "bottom_text": "Vs 60 college students forced into Hall B to preserve their grades",
+          "caption": "Voluntary attendance would turn this lecture into an echo chamber.",
+          "hashtags": [
+            "#AttendanceMatters",
+            "#CollegeReality",
+            "#HigherEducationHumor",
+            "#StudentVibes",
+            "#8amLectures"
+          ]
+        }
+      ]
+    },
+    "created_at": "2026-10-10T07:57:25.959Z"
+  }
+]
