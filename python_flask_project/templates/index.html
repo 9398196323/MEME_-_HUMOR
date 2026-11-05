@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Meme &amp; Humor Idea Generator - Python Flask</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Space+Grotesk:wght@600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="app-container">
+    <header class="app-header">
+      <div class="brand">
+        <div class="logo-badge">MG</div>
+        <div>
+          <h1>Meme &amp; Humor Generator</h1>
+          <p class="subtitle">Python Flask + SQLite + Google Gemini Engine</p>
+        </div>
+      </div>
+      <div class="header-status" id="healthBadge">
+        <span class="status-dot"></span> Checking Status...
+      </div>
+    </header>
+
+    <nav class="nav-tabs">
+      <button class="nav-btn active" data-tab="memes">Meme Studio</button>
+      <button class="nav-btn" data-tab="captions">Caption Generator</button>
+      <button class="nav-btn" data-tab="jokes">Joke Vault</button>
+      <button class="nav-btn" data-tab="favorites">Saved Ideas (<span id="favCount">0</span>)</button>
+      <button class="nav-btn" data-tab="history">History</button>
+    </nav>
+
+    <main class="main-content">
+      <!-- TAB 1: MEME STUDIO -->
+      <section id="tab-memes" class="tab-panel active">
+        <div class="card generator-box">
+          <h2>Generate Fresh Meme Concepts</h2>
+          <p class="section-desc">Enter any topic or pick a popular campus / tech prompt to generate 5 hilarious concepts.</p>
+
+          <div class="quick-chips">
+            <span class="chip-label">Quick topics:</span>
+            <button class="chip" data-topic="College 8 AM Attendance">8 AM Attendance</button>
+            <button class="chip" data-topic="Night before semester exam">Night Before Exam</button>
+            <button class="chip" data-topic="Hostel mess food mystery">Hostel Mess Food</button>
+            <button class="chip" data-topic="Senior developer reviewing junior PR">Senior vs Junior Dev</button>
+            <button class="chip" data-topic="GPay balance on month end">Month End Balance</button>
+          </div>
+
+          <div class="form-grid">
+            <div class="form-group full-width">
+              <label for="topicInput">Your Topic / Situation:</label>
+              <input type="text" id="topicInput" placeholder="e.g., Submitting assignment 10 seconds before 11:59 PM deadline...">
+            </div>
+
+            <div class="form-group">
+              <label for="categorySelect">Humor Category:</label>
+              <select id="categorySelect">
+                <option value="Relatable Humor">Relatable Humor</option>
+                <option value="College and Student Humor" selected>College &amp; Student Humor</option>
+                <option value="Programming and Developer Humor">Programming &amp; Developer Humor</option>
+                <option value="Sarcastic Humor">Sarcastic Humor</option>
+                <option value="Situational Comedy">Situational Comedy</option>
+                <option value="Puns and Wordplay">Puns &amp; Wordplay</option>
+                <option value="Wholesome Humor">Wholesome Humor</option>
+                <option value="Observational Comedy">Observational Comedy</option>
+                <option value="Trending-Style Meme Concepts">Trending Meme Concepts</option>
+                <option value="Dark Humor (Non-graphic)">Dark Humor (Safe &amp; Clean)</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label for="styleSelect">Humor Style:</label>
+              <select id="styleSelect">
+                <option value="Witty" selected>Witty</option>
+                <option value="Sarcastic">Sarcastic</option>
+                <option value="Playful">Playful</option>
+                <option value="Exaggerated">Exaggerated</option>
+                <option value="Dry humor">Dry Humor</option>
+                <option value="Clean and family-friendly">Clean &amp; Family Friendly</option>
+                <option value="Absurd">Absurd</option>
+                <option value="Clever wordplay">Clever Wordplay</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label for="languageSelect">Language:</label>
+              <select id="languageSelect">
+                <option value="English" selected>English</option>
+                <option value="Tanglish">Tanglish (Tamil in English)</option>
+                <option value="Tamil">தமிழ் (Tamil Script)</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label for="intensitySelect">Humor Intensity:</label>
+              <select id="intensitySelect">
+                <option value="Mild">Mild</option>
+                <option value="Medium" selected>Medium</option>
+                <option value="Extra funny">High</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="action-buttons">
+            <button id="generateBtn" class="btn btn-primary">Generate 5 Ideas</button>
+            <button id="surpriseBtn" class="btn btn-secondary">Surprise Me</button>
+          </div>
+        </div>
+
+        <div id="resultsContainer" class="results-container">
+          <!-- Generated cards rendered here -->
+        </div>
+      </section>
+
+      <!-- TAB 2: CAPTIONS -->
+      <section id="tab-captions" class="tab-panel">
+        <div class="card">
+          <h2>Social Media Caption Generator</h2>
+          <p class="section-desc">Generate 5 viral, punchy captions with hashtags for Instagram, Threads, and Twitter.</p>
+          <div class="form-grid">
+            <div class="form-group full-width">
+              <label for="captionTopicInput">Topic or Scenario:</label>
+              <input type="text" id="captionTopicInput" placeholder="e.g., Sitting in a 3-hour seminar that could have been an email...">
+            </div>
+            <div class="form-group">
+              <label for="captionToneSelect">Tone:</label>
+              <select id="captionToneSelect">
+                <option value="Witty" selected>Witty</option>
+                <option value="Sarcastic">Sarcastic</option>
+                <option value="Self-deprecating">Self-deprecating</option>
+                <option value="Hype / Energetic">Hype / Energetic</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="captionLangSelect">Language:</label>
+              <select id="captionLangSelect">
+                <option value="English">English</option>
+                <option value="Tanglish">Tanglish</option>
+                <option value="Tamil">Tamil</option>
+              </select>
+            </div>
+          </div>
+          <button id="generateCaptionsBtn" class="btn btn-primary">Generate 5 Captions</button>
+          <div id="captionResults" class="captions-grid"></div>
+        </div>
+      </section>
+
+      <!-- TAB 3: JOKES -->
+      <section id="tab-jokes" class="tab-panel">
+        <div class="card">
+          <h2>Joke &amp; One-Liner Vault</h2>
+          <p class="section-desc">Clean, clever, and relatable jokes across college, programming, and everyday life.</p>
+          <div class="form-grid">
+            <div class="form-group">
+              <label for="jokeCategorySelect">Category:</label>
+              <select id="jokeCategorySelect">
+                <option value="Programming and Developer Humor">Programming &amp; Developer</option>
+                <option value="College and Student Humor" selected>College &amp; Student Life</option>
+                <option value="Puns and Wordplay">Puns &amp; Wordplay</option>
+                <option value="Situational Comedy">Situational</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="jokeCountSelect">Number of Jokes (1-10):</label>
+              <input type="number" id="jokeCountSelect" min="1" max="10" value="5">
+            </div>
+            <div class="form-group">
+              <label for="jokeLangSelect">Language:</label>
+              <select id="jokeLangSelect">
+                <option value="English">English</option>
+                <option value="Tanglish">Tanglish</option>
+              </select>
+            </div>
+          </div>
+          <button id="generateJokesBtn" class="btn btn-primary">Generate Jokes</button>
+          <div id="jokeResults" class="jokes-grid"></div>
+        </div>
+      </section>
+
+      <!-- TAB 4: FAVORITES -->
+      <section id="tab-favorites" class="tab-panel">
+        <div class="card">
+          <div class="card-header-flex">
+            <div>
+              <h2>Saved Favorite Ideas</h2>
+              <p class="section-desc">Stored in SQLite database. Accessible across sessions.</p>
+            </div>
+            <input type="text" id="favSearchInput" class="search-input" placeholder="Search saved ideas...">
+          </div>
+          <div id="favoritesList" class="favorites-grid"></div>
+        </div>
+      </section>
+
+      <!-- TAB 5: HISTORY -->
+      <section id="tab-history" class="tab-panel">
+        <div class="card">
+          <div class="card-header-flex">
+            <div>
+              <h2>Generation History</h2>
+              <p class="section-desc">Audited local history with timestamps and settings.</p>
+            </div>
+            <button id="clearHistoryBtn" class="btn btn-danger-outline">Clear History</button>
+          </div>
+          <div id="historyList" class="history-list"></div>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <div id="toast" class="toast">Copied to clipboard!</div>
+  <script src="{{ url_for('static', filename='js/app.js') }}"></script>
+</body>
+</html>
